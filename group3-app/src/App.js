@@ -1,25 +1,50 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
+import Headline from './components/Headline';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      subtitle: ''
+    }
+  }
+  componentDidMount() {
+    fetch("http://localhost:9000/helloworld")
+      .then(res => res.json())
+      .then(data => this.setState({ 
+        title: data.text,
+        subtitle: data.subtitle 
+      }))
+      .catch(err => err);
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Headline title={this.state.title} subtitle={this.state.subtitle}/>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
+
+/* App.js by Group 3 Inc.
+
+In this file:
+* We build the App class that is rendered by the ReactDOM method within index.js 
+
+* We create the application state. The App component owns the state within our application.
+
+* calls the componentDidMount() lifecycle method to fetch data from our API and update our state's properties with the data from the response 
+
+* Renders the html container that is used as the parent container throughout the application.
+
+- ML, 12/8/2021
+
+*/
