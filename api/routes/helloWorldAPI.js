@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { helloWorld } = require('../models/HelloWorldSchema');
 
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
+  const data = await helloWorld.find().then(data => data[0]);
   res.send({
-    text: "Hello World",
+    hello_world: data,
     subtitle: "group 3 is in the house!"
   });
 });

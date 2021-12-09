@@ -15,7 +15,7 @@ class App extends Component {
     fetch("http://localhost:9000/helloworld")
       .then(res => res.json())
       .then(data => this.setState({ 
-        title: data.text,
+        title: data.hello_world.primary_string,
         subtitle: data.subtitle 
       }))
       .catch(err => err);
