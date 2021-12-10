@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    fetch("http://localhost:9000/helloworld")
+    fetch("http://group3api-env-1.eba-vjrvvfkm.us-east-1.elasticbeanstalk.com/helloworld")
       .then(res => res.json())
       .then(data => this.setState({ 
         title: data.hello_world.primary_string,

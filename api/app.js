@@ -1,11 +1,13 @@
 const createError = require('http-errors');
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require("cors");
 
-require('dotenv').config();
+const dotenv = require('dotenv')
+dotenv.config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -27,6 +29,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/helloworld', helloWorldAPI);
+
+const port = process.env.PORT || 8081;
+
+mongoose.connect("mongodb+srv://meanxael:tt5FXQD1XudeUPLd@cluster0.u46go.mongodb.net/group3?retryWrites=true&w=majority", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+}).then(() => {
+  app.listen(port, function () {
+      console.log('Server running at http://127.0.0.1:' + port + '/');
+  });
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
