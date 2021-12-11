@@ -8,7 +8,7 @@ const { helloWorld } = require('../models/HelloWorldSchema');
 const KEY = process.env.MONGOKEY;
 
 router.get('/', function(req, res, next) {
-  mongoose.connect(KEY, {
+  mongoose.connect("mongodb+srv://meanxael:tt5FXQD1XudeUPLd@cluster0.u46go.mongodb.net/group3?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   }).then(() => {
