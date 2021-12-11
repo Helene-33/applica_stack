@@ -20,7 +20,7 @@ app.use(express.static(path.resolve(__dirname, "./group3-app/build")));
 
 app.use('/helloworld', helloWorldAPI);
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 5000;
 
 // Global handler
 app.get("*", function (request, response) {
