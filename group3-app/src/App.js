@@ -12,10 +12,10 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    fetch("http://localhost:9000/helloworld")
+    fetch(`/helloworld`)
       .then(res => res.json())
       .then(data => this.setState({ 
-        title: data.hello_world.primary_string,
+        title: data.data[0].primary_string,
         subtitle: data.subtitle 
       }))
       .catch(err => err);
