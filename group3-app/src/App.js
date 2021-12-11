@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    fetch('/helloworld')
+    fetch(`/helloworld`)
       .then(res => res.json())
       .then(data => this.setState({ 
         title: data.data[0].primary_string,
