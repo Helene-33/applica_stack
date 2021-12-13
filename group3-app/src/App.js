@@ -26,7 +26,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Headline title={this.state.title} subtitle={this.state.subtitle}/>
-          <h1> It's a MERN world</h1>
+          <h1> It's a MERN world!</h1>
         </header>
       </div>
     );
