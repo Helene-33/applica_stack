@@ -8,6 +8,7 @@
 ## ✨  Authors & Contributors ✨
 - [Michael Lyon](https://www.github.com/lyoncodes)
 - [Intisar Osman](https://github.com/intisarosman1)
+- [Samuel Smolen](https://github.com/sam-smolen)
 ---
 ### **Getting Started:**
 ### **npm run start**
