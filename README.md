@@ -10,6 +10,7 @@
 - [Intisar Osman](https://github.com/intisarosman1)
 - [Samuel Smolen](https://github.com/sam-smolen)
 - [Austin Doke](https://github.com/ALDoke)
+- [Helene Liobard](https://github.com/Helene-33)
 ---
 ### **Getting Started:**
 ### **npm run start**
