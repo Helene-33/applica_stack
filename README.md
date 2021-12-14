@@ -9,6 +9,7 @@
 - [Michael Lyon](https://www.github.com/lyoncodes)
 - [Intisar Osman](https://github.com/intisarosman1)
 - [Samuel Smolen](https://github.com/sam-smolen)
+- [Austin Doke](https://github.com/ALDoke)
 ---
 ### **Getting Started:**
 ### **npm run start**
