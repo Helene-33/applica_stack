@@ -11,7 +11,7 @@
 - [Samuel Smolen](https://github.com/sam-smolen)
 - [Austin Doke](https://github.com/ALDoke)
 - [Helene Liobard](https://github.com/Helene-33)
-- [Daniel Gebreselassie] (https://github.com/DanielGebre2022)
+- [Daniel Gebreselassie](https://github.com/DanielGebre2022)
 ---
 ### **Getting Started:**
 ### **npm run start**
